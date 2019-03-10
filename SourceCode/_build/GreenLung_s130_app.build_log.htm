@@ -1,0 +1,97 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: μVision V5.25.2.0
+Copyright (C) 2018 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: sssss ffff, wwww, LIC=X96Z9-43IJA-T3EMI-TFPYS-Q26WC-CQLJ3
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Plus  Version: 5.25.2.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 6 (build 750)
+Assembler:       Armasm.exe V5.06 update 6 (build 750)
+Linker/Locator:  ArmLink.exe V5.06 update 6 (build 750)
+Library Manager: ArmAr.exe V5.06 update 6 (build 750)
+Hex Converter:   FromElf.exe V5.06 update 6 (build 750)
+CPU DLL:         SARMCM3.DLL V5.25.2.0
+Dialog DLL:      DARMCM1.DLL V1.19.1.0
+Target DLL:      Segger\JL2CM3.dll V2.99.29.0
+Dialog DLL:      TARMCM1.DLL V1.14.0.0
+ 
+<h2>Project:</h2>
+D:\MCU_Projects\GreenLung\greenlung_pagestorage_test_1\SourceCode\GreenLung.uvprojx
+Project File Date:  03/10/2019
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 6 (build 750)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
+Build target 'GreenLung'
+compiling main.c...
+main.c(566): warning:  #177-D: variable "last_ticks"  was declared but never referenced
+  		static uint32_t last_ticks = 0;
+main.c(569): warning:  #177-D: variable "temp_time"  was declared but never referenced
+  		uint32_t temp_time = 0;
+main.c(777): warning:  #177-D: variable "err_code"  was declared but never referenced
+  		uint32_t err_code;
+main.c(1102): warning:  #177-D: variable "num_sector"  was declared but never referenced
+  		uint16_t num_sector; //60s 存了几个sector
+main.c(1103): warning:  #177-D: variable "single_sector"  was declared but never referenced
+  		uint16_t single_sector;
+main.c(1337): warning:  #111-D: statement is unreachable
+  										err_code = app_timer_start(m_heart_rate_timer_id, HEART_RATE_OFF_LINE_MEAS_INTERVAL, NULL); //一上电就测量。500ms间隔
+main.c(1153): warning:  #177-D: variable "addr"  was declared but never referenced
+  		static uint32_t addr = 0;   //按页存储，连线后离线数据发送出去，就删flash，所以每次连线都从0地址开始读。
+main.c(1154): warning:  #177-D: variable "num_page"  was declared but never referenced
+  		static uint16_t num_page = 0;
+main.c(1155): warning:  #177-D: variable "i"  was declared but never referenced
+  		static uint16_t i = 0;
+main.c(1156): warning:  #177-D: variable "buf"  was declared but never referenced
+  		uint8_t buf[20] = {0};
+main.c(1161): warning:  #177-D: variable "transfered_mark"  was declared but never referenced
+  		uint8_t transfered_mark = 0xaa;
+main.c(176): warning:  #177-D: variable "red_led_convert_flag"  was declared but never referenced
+  static bool         red_led_convert_flag = true;
+main.c(186): warning:  #550-D: variable "m_BLE_Connect_Status"  was set but never used
+  static bool					m_BLE_Connect_Status = false;
+main.c(961): warning:  #177-D: function "application_timers_start"  was declared but never referenced
+  static void application_timers_start(void)
+main.c(983): warning:  #177-D: function "application_timers_stop"  was declared but never referenced
+  static void application_timers_stop(void)
+main.c: 15 warnings, 0 errors
+linking...
+Program Size: Code=45276 RO-data=1216 RW-data=564 ZI-data=8444  
+FromELF: creating hex file...
+".\_build\GreenLung_s130_app.axf" - 0 Error(s), 15 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.4.5.0.pack
+                ARM.CMSIS.4.5.0
+                CMSIS (Cortex Microcontroller Software Interface Standard)
+   * Component: CORE Version: 4.3.0
+
+Package Vendor: NordicSemiconductor
+                http://developer.nordicsemi.com/nRF5_SDK/pieces/nRF_DeviceFamilyPack/NordicSemiconductor.nRF_DeviceFamilyPack.8.11.1.pack
+                NordicSemiconductor.nRF_DeviceFamilyPack.8.11.1
+                Nordic Semiconductor nRF ARM devices Device Family Pack.
+   * Component: Startup Version: 8.11.1
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_GreenLung
+  C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include
+  C:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.11.1\Device\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:4.3.0
+
+   * Component: NordicSemiconductor::Device:Startup:8.11.1
+      Source file:   Device\Source\arm\arm_startup_nrf51.s
+      Source file:   Device\Source\system_nrf51.c
+      Include file:  Device\Include\system_nrf51.h
+Build Time Elapsed:  00:00:04
+</pre>
+</body>
+</html>
